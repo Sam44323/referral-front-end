@@ -1,8 +1,7 @@
-@import '../shared/sharedCard.scss';
+@import '../shared/sharedCard.module.scss';
 
 .SignupContainer{
 @include sharedStyles();
-
   .HeaderContainer{
     padding: 20px 0;
     h1,p{
