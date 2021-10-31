@@ -10,8 +10,8 @@ interface InputProps{
 
 const Input: React.FC<InputProps> = (props) => {
   return <div className={styles.InputContainer}>
-    <label className={styles.InputLabel}>{props.placeholder}</label>
-    <input className={styles.Input} type={props.type} value={props.value} onChange={props.onChange} />
+    <label>{props.placeholder} {props.placeholder === 'referral' && '(if-any)'}</label>
+    <input type={props.type} value={props.value} onChange={props.onChange} />
   </div>
 }
 

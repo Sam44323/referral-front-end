@@ -1,0 +1,21 @@
+.InputContainer{
+  label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    color: brown;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-transform: capitalize;
+    margin-top: 20px;
+  }
+  input{
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid salmon;
+    background-color: transparent;
+    outline: none;
+  }
+}
