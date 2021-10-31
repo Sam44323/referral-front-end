@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/pages/Signin.module.scss'
 import Input from '../components/Input';
+import axios from '../axios/axios';
 
 interface SigninProps{
   email: string,
@@ -15,6 +16,8 @@ const Signin: React.FC = () => {
     email: '',
     token: '',
   })
+
+  const [hasToken, setHasToken] = React.useState<boolean>(false);
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
@@ -35,6 +38,8 @@ const Signin: React.FC = () => {
           })
        }
     </section>
+
+  <button>{hasToken ? 'Login' : "Receive Token"}</button>
   </div>
 }
 
