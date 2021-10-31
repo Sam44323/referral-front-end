@@ -1,7 +1,5 @@
 @import '../shared/sharedCard.module.scss';
 
-
-
 .SigninContainer{
   @include sharedStyles();
   .HeaderContainer{
@@ -10,6 +8,8 @@
       margin: 0;
       color: rgb(233, 71, 53);
     }
-
+  }
+  .InputContainer{
+    @include inputContainer();
   }
 }

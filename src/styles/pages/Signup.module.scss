@@ -19,7 +19,6 @@
     }
   }
   .InputContainer{
-    width: 70%;
-    margin: 0 auto;
+   @include inputContainer();
   }
 }

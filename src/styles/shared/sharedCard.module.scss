@@ -12,3 +12,8 @@
   background-color: #fff;
   padding-bottom: 30px;
 }
+
+@mixin inputContainer{
+   width: 70%;
+   margin: 0 auto;
+}
