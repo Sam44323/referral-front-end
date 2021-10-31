@@ -1,0 +1,30 @@
+.SignupContainer{
+   position: absolute;
+   top: 10%;
+   left: 0;
+   right: 0; 
+  background-color: aliceblue;
+  width: 40%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 13px;
+  background-color: #FED2AA;
+
+  .HeaderContainer{
+    padding: 20px 0;
+    h1,p{
+      margin: 0;
+      color: rgb(233, 71, 53);
+    }
+    hr{
+      width: 80%;
+      border: 1px solid rgb(233, 71, 53);
+      outline: none;
+    }
+    p{
+      color: brown;
+      margin:  0 auto;
+    }
+  }
+}

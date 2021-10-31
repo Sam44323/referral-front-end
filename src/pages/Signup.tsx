@@ -13,7 +13,11 @@ const Signup: React.FC = () => {
   const [signupData, setSignupData] = React.useState()
 
   return <div className={styles.SignupContainer}>
-    <section className={styles.HeaderContainer}></section>
+    <section className={styles.HeaderContainer}>
+      <h1>Register Yourself</h1>
+      <hr/>
+      <p>Please enter the following details</p>
+    </section>
     <section className={styles.InputContainer}></section>
   </div>
 }
