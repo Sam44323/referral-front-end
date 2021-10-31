@@ -1,0 +1,14 @@
+@mixin sharedStyles{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0; 
+  background-color: aliceblue;
+  width: 40%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 13px;
+  background-color: #fff;
+  padding-bottom: 30px;
+}
