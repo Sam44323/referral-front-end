@@ -17,5 +17,9 @@
     border-bottom: 1px solid salmon;
     background-color: transparent;
     outline: none;
+    transition: all 0.3s ease-in-out;
+    &:focus{
+      border-bottom: 2.8px solid salmon;
+    }
   }
 }
