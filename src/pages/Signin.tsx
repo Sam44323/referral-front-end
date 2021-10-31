@@ -8,8 +8,7 @@ interface SigninProps{
   token: string,
 }
 
-const inputArray = ["email", "token"];
-type FormInputs = "email" | "token";
+
 
 const Signin: React.FC = () => {
   const [signinForm, setSigninForm] = React.useState<SigninProps>({
@@ -27,22 +26,23 @@ const Signin: React.FC = () => {
     }))
   }
 
-  const receiveTokenHandler = () => {
-
+  const receiveTokenHandler = async() => {
+    const response = await axios.post('/users/email', {
+      email: signinForm.email
+    })
+    console.log((response as any).data);
   }
 
-  const loginHandler = () => {}
+  const loginHandler = async() => {
+  }
 
   return <div className={styles.SigninContainer}>
      <section className={styles.HeaderContainer}>
       <h1>Login</h1>
     </section>
     <section className={styles.InputContainer}>
- {
-          inputArray.map((input, index) => {
-             return  <Input key={index} placeholder={input} type="text" value={signinForm[input as FormInputs]} onChange={handleChange}/>
-          })
-       }
+    <Input  placeholder="email" type="text" value={signinForm.email} onChange={e => handleChange(e, "email")}/>
+    {hasToken && <Input  placeholder="Verification Token" type="text" value={signinForm.token} onChange={e => handleChange(e, "token")}/>}
     </section>
 
   <button onClick={hasToken ? loginHandler : receiveTokenHandler}>{hasToken ? 'Login' : "Receive Token"}</button>
