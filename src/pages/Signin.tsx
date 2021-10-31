@@ -27,6 +27,12 @@ const Signin: React.FC = () => {
     }))
   }
 
+  const receiveTokenHandler = () => {
+
+  }
+
+  const loginHandler = () => {}
+
   return <div className={styles.SigninContainer}>
      <section className={styles.HeaderContainer}>
       <h1>Login</h1>
@@ -39,7 +45,7 @@ const Signin: React.FC = () => {
        }
     </section>
 
-  <button>{hasToken ? 'Login' : "Receive Token"}</button>
+  <button onClick={hasToken ? loginHandler : receiveTokenHandler}>{hasToken ? 'Login' : "Receive Token"}</button>
   </div>
 }
 
