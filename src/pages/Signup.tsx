@@ -7,7 +7,8 @@ interface SignupStateProps{
   email: string,
   referral: string,
   privacyPolicy: boolean,
-  source: "WEB_APP"
+  source: "WEB_APP",
+  verification: string,
 }
 
 const inputArray = ["name", "email", "referral"];
@@ -19,8 +20,10 @@ const Signup: React.FC = () => {
     email: "",
     referral: "",
     privacyPolicy: false,
-    source: "WEB_APP"
+    source: "WEB_APP",
+    verification: "",
   })
+  const [fetchedVerification, setFetchedVerification] = React.useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     
@@ -39,6 +42,10 @@ const Signup: React.FC = () => {
              return  <Input key={index} placeholder={input} type="text" value={signupData[input as FormInputs]} onChange={handleChange}/>
           })
        }
+
+       <div className={styles.VerificationSection} hidden={!fetchedVerification}>
+       <Input type="text" placeholder="Verification Code" value={signupData.verification} onChange={handleChange}/>
+       </div>
         
     </section>
   </div>
