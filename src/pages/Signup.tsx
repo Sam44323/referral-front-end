@@ -12,7 +12,7 @@ interface SignupStateProps{
 }
 
 const inputArray = ["name", "email", "referral"];
-type FormInputs = "name" | "email" | "referral";
+type FormInputs = "name" | "email" | "referral" | "verification";
 
 const Signup: React.FC = () => {
   const [signupData, setSignupData] = React.useState<SignupStateProps>({
@@ -25,8 +25,11 @@ const Signup: React.FC = () => {
   })
   const [fetchedVerification, setFetchedVerification] = React.useState<boolean>(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
+    setSignupData(prev => ({
+      ...prev,
+      [name]: e.target.value
+    }))
   }
 
   return <div className={styles.SignupContainer}>
@@ -44,7 +47,7 @@ const Signup: React.FC = () => {
        }
 
        <div className={styles.VerificationSection} hidden={!fetchedVerification}>
-       <Input type="text" placeholder="Verification Code" value={signupData.verification} onChange={handleChange}/>
+       <Input type="text" placeholder="verification" value={signupData.verification} onChange={handleChange}/>
        </div>
         
     </section>

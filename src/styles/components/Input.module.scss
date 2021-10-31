@@ -18,6 +18,7 @@
     background-color: transparent;
     outline: none;
     transition: all 0.3s ease-in-out;
+    color: darkslategrey;
     &:focus{
       border-bottom: 2.8px solid salmon;
     }
